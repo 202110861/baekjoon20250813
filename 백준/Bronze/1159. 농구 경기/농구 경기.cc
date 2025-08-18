@@ -16,16 +16,14 @@ int main() {
 
 	cin >> num;
 
-
 	for (int i = 0; i < num; i++) {
 		cin >> s[i];
 		player[s[i][0]]++;
 		
 	}
 	
-
 	for (auto &m : player) {
-		if (m.second > 4) {
+		if (m.second >= 5) {
 			count++;
 			cout << m.first;
 		}
