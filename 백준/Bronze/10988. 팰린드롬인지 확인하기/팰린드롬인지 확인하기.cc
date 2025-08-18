@@ -5,26 +5,19 @@ using namespace std;
 
 //백준 문제 10988 : 팰린드롬인지 확인하기 
 
-string s;
-int res;
+string s, temp;
 
-int palindrome(string str) {
-	int num = 1;
-	for (int i = 0; i < str.size(); i++) {
-		if (str[i] != str[str.size() - 1 - i]) {
-			num = 0; 
-			break;
-		}
-		
-	}
-	return num;
-}
 
 int main() {
 	cin >> s;
-	res = palindrome(s);
-	cout << res;
+	temp = s;
+	reverse(temp.begin(), temp.end());
+	if (temp == s) cout << 1 << "\n";
+	else cout << 0<<"\n";
+
 	return 0;
+
+	
 }
 
 
