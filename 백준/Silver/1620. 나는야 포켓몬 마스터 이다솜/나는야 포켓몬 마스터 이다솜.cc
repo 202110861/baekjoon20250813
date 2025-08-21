@@ -45,6 +45,17 @@ int main() {
 
 	for (int i = 1; i <= N; i++) {
 		
+		//입력 값이 숫자인지 문자열인지 판단하는 로직
+		/*
+		for (char c : problem[i]) {
+			if (isdigit(c) == 0) {
+				num = 0;
+				break;
+			}
+			num = 1;
+			resNum.push_back(c);
+		}
+		*/
 		num = atoi(problem[i].c_str());
 		
 		if (num == 0) cout << pkmNum[problem[i]] << "\n";
